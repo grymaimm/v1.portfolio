@@ -25,7 +25,7 @@ export default function SectionIntroduction() {
                 </div>
                 <span className="text-primary/55 text-sm">|</span>
                 <TypographyP className="text-primary/55 text-sm">
-                  @grymaimm
+                  @aiiimmmm._
                 </TypographyP>
               </div>
             </div>
@@ -49,7 +49,7 @@ export default function SectionIntroduction() {
                 </div>
                 <span className="text-primary/55 text-sm">|</span>
                 <TypographyP className="text-primary/55 text-sm">
-                  @grymaimm
+                  @aiiimmmm._
                 </TypographyP>
               </div>
             </div>

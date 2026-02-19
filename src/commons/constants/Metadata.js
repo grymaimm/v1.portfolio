@@ -13,6 +13,7 @@ export const MetadataConstants = {
     "fullstack developer",
     "aiimmm",
     "grymaimm",
+    "aiiimmmm._",
   ],
 
   authors: [
