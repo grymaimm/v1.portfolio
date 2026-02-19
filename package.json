@@ -15,10 +15,7 @@
     "format:check": "prettier --check ."
   },
   "lint-staged": {
-    "**/*": [
-      "next lint --fix",
-      "prettier --write"
-    ]
+    "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "@prisma/client": "^6.19.2",
