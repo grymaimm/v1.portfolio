@@ -49,6 +49,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="4Xxmb6uS-bWw-YdGi8C_pBle24WQSoU1rUISD2nw-XA"
+        />
+      </head>
       <body className={cn("font-sans antialiased", fontSans.variable)}>
         <ThemeProvider
           attribute="class"
