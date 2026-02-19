@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, TrendingUpIcon } from "lucide-react";
 import Link from "next/link";
 
+export const revalidate = 10;
+
 export default function SectionProject() {
   const projectsUrl = "https://www.grymaimm.my.id/projects";
   return (
@@ -40,7 +42,7 @@ export default function SectionProject() {
             Recent projects I’ve designed and developed.
           </TypographyP>
         </div>
-        <ProjectLatestSection />
+        <ProjectLatestSection limit={5} />
       </section>
     </BlurFade>
   );

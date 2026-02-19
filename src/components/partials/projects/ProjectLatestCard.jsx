@@ -1,4 +1,6 @@
-import { SKILLS_MAP } from "@/commons/constants/MySkills";
+"use client";
+
+import { ICON_MAP, SKILLS_MAP } from "@/commons/constants/MySkills";
 import { ImageBlur } from "@/components/elements/ImageBlur";
 import LightRays from "@/components/magicui/light-rays";
 import { Badge } from "@/components/ui/badge";
@@ -91,12 +93,16 @@ export default function ProjectLatestCard({ project }) {
             </CardDescription>
             <div className="flex flex-wrap items-center gap-2 pt-2">
               {project.techStack?.map((tech) => {
-                const Icon = SKILLS_MAP[tech];
+                const skill = SKILLS_MAP[tech];
+                if (!skill) return null;
+
+                const Icon = ICON_MAP[skill.icon];
                 if (!Icon) return null;
+
                 return (
                   <Tooltip key={tech}>
-                    <TooltipTrigger className="size-6 flex items-center justify-center">
-                      {Icon}
+                    <TooltipTrigger className="flex items-center justify-center z-1">
+                      <Icon size={20} className={skill.color} />
                     </TooltipTrigger>
                     <TooltipContent>
                       <p>{tech}</p>
