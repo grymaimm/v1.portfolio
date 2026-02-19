@@ -19,7 +19,12 @@ export default function AutoScrollSkills() {
           {row.map((stack) => (
             // <BlurFade key={stack.name} inView>
             <div key={stack.name}>
-              <CardSkills name={stack.name} icon={stack.icon} />
+              <CardSkills
+                name={stack.name}
+                icon={stack.icon}
+                color={stack.color}
+                size={20}
+              />
             </div>
             // </BlurFade>
           ))}

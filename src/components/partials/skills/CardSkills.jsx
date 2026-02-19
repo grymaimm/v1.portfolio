@@ -1,8 +1,13 @@
+import { ICON_MAP } from "@/commons/constants/MySkills";
 import { TypographyP } from "@/components/elements/Typography";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
-export default function CardSkills({ name, icon }) {
+export default function CardSkills({ name, icon, color, size = 20 }) {
+  const Icon = ICON_MAP[icon];
+
+  if (!Icon) return null;
+
   return (
     <Card
       className={cn(
@@ -14,7 +19,8 @@ export default function CardSkills({ name, icon }) {
       )}
     >
       <CardContent className="px-3 flex flex-row items-center justify-center gap-2">
-        {icon} <TypographyP className="text-sm">{name}</TypographyP>
+        <Icon size={size} className={color} />
+        <TypographyP className="text-sm">{name}</TypographyP>
       </CardContent>
     </Card>
   );
